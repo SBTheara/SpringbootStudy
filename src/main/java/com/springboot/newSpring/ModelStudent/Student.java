@@ -11,10 +11,19 @@ import lombok.*;
 @Table
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int StuId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "student_id")
+    private Long StuId;
+
+    @Column(name = "student_name")
     private String StuName;
+
+    @Column(name = "student_gender")
     private String StuSex;
+
+    @Column(name = "student_score")
     private double StuScore;
+
+    @Column(name = "student_address")
     private String StuAddress;
 }

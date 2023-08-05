@@ -1,14 +1,17 @@
 package com.springboot.newSpring.ModelStudent;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
+
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Entity
+@Table
 public class Student {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int StuId;
     private String StuName;
     private String StuSex;
